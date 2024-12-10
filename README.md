@@ -1,6 +1,9 @@
 # ProvCon Dataset
 This repository contains the provenance graph constructed using ProvCon.
 
+## How Provenance Graph is Constructed
+Using cyberattack information from CTI reports, ProvCon reproduce the cyberattack on a cyber range. After executing the attack activities throughout the environment, data are exracted and transformed into provenance graph. For Linux-based systems, the provenance graph is constructed using the `sysdig` logs. For Windows-based systems, the provenance graph is constructed using the `Sysmon` logs.
+
 ## Data Summary
 
 Below describe the file structure of this repository. In addition to default system logging, we utilize [Linux Audit Daemon](https://linux.die.net/man/8/auditd) (`auditd`) and [Sysdig](https://github.com/draios/sysdig) for Linux-based systems and [System Monitor](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) (Sysmon) for Windows-based systems.
@@ -22,9 +25,6 @@ The Sysmon logs for Windows-based systems is at `/<apt>/logs/<instance>_events_l
 
 #### Annotation
 The annotation is located at `/<apt>/annotation-attack.csv` as a semicolon `;` delimited `*.csv` file. The annotations provide labels for the corresponding attack activities recorded in the respective logs. Additionally, it contain attributed information (i.e., which system, what executable) as well as being tagged to the particular event across the attack sequence.
-
-## How Provenance Graph is Constructed
-Using cyberattack information from CTI reports, ProvCon reproduce the cyberattack on a cyber range. After executing the attack activities throughout the environment, data are exracted and transformed into provenance graph. For Linux-based systems, the provenance graph is constructed using the `sysdig` logs. For Windows-based systems, the provenance graph is constructed using the `Sysmon` logs.
 
 ## Other Data
 In additon to system logs that are used for constructing provenance graph, we also extract other types of data that are relevant for attack analysis.
