@@ -1,0 +1,5 @@
+eventid;instanceName;artifactName;desc;lineNoSysdig;lineNoAuditd;eventId
+0;VictimMachine;exec-extractor.ps1;Initial Compromise via Adobe Flash Install;[];[];['3061']
+1;VictimMachine;exec-goopdate.ps1;Load goopdate.dll via Search Order Hijacking;[];[];[]
+2;VictimMachine;cobalt_strike_stager.exe;Execute Cobalt Strike Stager;[];[];['3203', '3203', '3204', '3205', '3209']
+3;VictimMachine;shellcode_downloader.ps1;Download and Execute Shellcode from Remote Server;[];[];[]
