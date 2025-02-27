@@ -1,5 +1,5 @@
 # ProvCon Dataset
-This repository contains the provenance graph constructed using ProvCon.
+This repository contains the provenance graph constructed using ProvCon presented at [WOSOC'25](https://www.ndss-symposium.org/ndss-paper/auto-draft-549/).
 
 ## How Provenance Graph is Constructed
 Using cyberattack information from CTI reports, ProvCon reproduce the cyberattack on a cyber range. After executing the attack activities throughout the environment, data are exracted and transformed into provenance graph. For Linux-based systems, the provenance graph is constructed using the `sysdig` logs. For Windows-based systems, the provenance graph is constructed using the `Sysmon` logs.
