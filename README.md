@@ -1,6 +1,20 @@
 # ProvCon Dataset
 This repository contains the provenance graph constructed using ProvCon presented at [WOSOC'25](https://www.ndss-symposium.org/ndss-paper/auto-draft-549/).
 
+If you use this dataset, please cite:
+
+```
+@inproceedings{provcon25,
+	title = {From {Observations} to {Insights}: {Constructing} {Effective} {Cyberattack} {Provenance} {With} {PROVCON}},
+	language = {en},
+	booktitle = {Workshop on {SOC} {Operations} and {Construction} ({WOSOC}) 2025},
+	author = {Yusof, Anis and Li, Shaofei and Kawatra, Arshdeep Singh and Li, Ding and Chang, Ee-Chien and Liang, Zhenkai},
+	year = {2025},
+	isbn = {9798991927604},
+	doi = {https://dx.doi.org/10.14722/wosoc.2025.23008},
+}
+```
+
 ## How Provenance Graph is Constructed
 Using cyberattack information from CTI reports, ProvCon reproduce the cyberattack on a cyber range. After executing the attack activities throughout the environment, data are exracted and transformed into provenance graph. For Linux-based systems, the provenance graph is constructed using the `sysdig` logs. For Windows-based systems, the provenance graph is constructed using the `Sysmon` logs.
 
